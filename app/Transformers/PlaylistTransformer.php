@@ -18,7 +18,7 @@ class PlaylistTransformer extends TransformerAbstract
             'title' => $playlist->title,
             'description' => $playlist->description,
             'image' => $playlist->image,
-            'created_at_human' => $playlist->created_at->diffForHumans(),
+            'created_at_human' => $playlist->published_at->diffForHumans(),
         ];
     }
 

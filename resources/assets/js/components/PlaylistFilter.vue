@@ -42,6 +42,7 @@ export default{
     },
     changeGame () {
       eventHub.$emit('filters.game', this.game)
+      eventHub.$emit('banner.game', this.game)
     }
   },
 

@@ -19,7 +19,7 @@
     </div>
     <div class="panel-footer clearfix">
       <ul class="text-right list-inline">
-        <li class="text-muted"><i class="fa fa-clock-o fa-fw"></i> {{ published }}</li>
+        <li class="text-muted"><i class="fa fa-clock-o fa-fw"></i> {{ playlist.created_at_human }}</li>
         <li><a class="text-muted" href="#" @click.prevent="getPreview">Preview <i class="fa fa-caret-down"></i></a></li>
       </ul>
 
@@ -49,9 +49,6 @@ export default {
   },
 
   computed: {
-    published () {
-      return moment(this.playlist.published_at).fromNow()
-    },
     playlistUrl () {
       return "https://www.youtube.com/playlist?list=" + this.playlist.key
     },

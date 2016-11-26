@@ -9,3 +9,30 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 @import "select2";
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.jumbotron {
+  background-position: center !important;
+  background-size: cover !important;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  h1 {
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
+    margin: 5rem 0;
+  }
+
+  p {
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
+    margin-bottom: 5rem;
+  }
+}
+
+.jumbotron-cover {
+  background: rgba(0, 0, 0, .8);
+}

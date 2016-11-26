@@ -20,3 +20,4 @@ Route::get('/user', function (Request $request) {
 Route::get('/playlists', 'Api\PlaylistController@index');
 
 Route::get('/games', 'Api\GameController@index');
+Route::get('/games/{id}', 'Api\GameController@show');

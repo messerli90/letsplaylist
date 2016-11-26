@@ -27,4 +27,11 @@ class GameController extends Controller
             ->paginateWith(new IlluminatePaginatorAdapter($games))
             ->toArray();
     }
+
+    public function show ($id)
+    {
+        $game = Game::find($id);
+
+        return response()->json($game);
+    }
 }

@@ -84,6 +84,9 @@
             </div>
         </nav>
 
+
+        <banner></banner>
+
         <div class="container">
             @yield('content')
         </div>
