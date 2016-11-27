@@ -50,7 +50,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         <li><a href="{{ route('playlists.index') }}">Playlists</a></li>
-                        <li><a href="{{ route('playlists.create') }}">Create Playlists</a></li>
+                        <li><a href="{{ route('playlists.create') }}">Add a Playlist</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

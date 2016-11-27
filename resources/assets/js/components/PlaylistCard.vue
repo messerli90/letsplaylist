@@ -1,36 +1,38 @@
 <template lang="html">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <span class="text-muted pull-right"><a class="text-muted" href="#" @click.prevent="changeGame">{{ playlist.game.data.title }}</a></span>
-      <h3 class="panel-title"><a :href="channelUrl">{{ playlist.channel.data.name }}</a></h3>
-    </div>
-    <div class="panel-body">
-      <div class="media">
-        <div class="media-left">
-          <a :href="playlistUrl" target="_blank">
-            <img class="media-object" :src="playlist.image" alt="Playlist thumbnail">
-          </a>
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading"><a :href="playlistUrl" target="_blank">{{ playlist.title }}</a></h4>
-          {{ playlist.description }}
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <span class="text-muted pull-right"><a class="text-muted" href="#" @click.prevent="changeGame">{{ playlist.game.data.title }}</a></span>
+        <h3 class="panel-title"><a :href="channelUrl">{{ playlist.channel.data.name }}</a></h3>
+      </div>
+      <div class="panel-body">
+        <div class="media">
+          <div class="media-left">
+            <a :href="playlistUrl" target="_blank">
+              <img class="media-object" :src="playlist.image" alt="Playlist thumbnail">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><a :href="playlistUrl" target="_blank">{{ playlist.title }}</a></h4>
+            {{ playlist.description }}
+          </div>
         </div>
       </div>
-    </div>
-    <div class="panel-footer clearfix">
-      <ul class="text-right list-inline">
-        <li class="text-muted"><i class="fa fa-clock-o fa-fw"></i> {{ playlist.created_at_human }}</li>
-        <li><a class="btn btn-primary btn-sm" href="#" @click.prevent="getPreview">Preview <i class="fa fa-caret-down"></i></a></li>
-      </ul>
+      <div class="panel-footer clearfix">
+        <ul class="text-right list-inline">
+          <li class="text-muted"><i class="fa fa-clock-o fa-fw"></i> {{ playlist.created_at_human }}</li>
+          <li><a class="btn btn-primary btn-sm" href="#" @click.prevent="getPreview">Preview <i class="fa fa-caret-down"></i></a></li>
+        </ul>
 
-      <hr v-if="preview_open" />
+        <hr v-if="preview_open" />
 
-      <div class="embed-responsive embed-responsive-16by9" v-if="preview_open">
-        <div class="loading-wrapper text-center" v-if="loading">
-          <p><i class="fa fa-spin fa-spinner fa-3x"></i></p>
-          <p>Loading first video of series</p>
+        <div class="embed-responsive embed-responsive-16by9" v-if="preview_open">
+          <div class="loading-wrapper text-center" v-if="loading">
+            <p><i class="fa fa-spin fa-spinner fa-3x"></i></p>
+            <p>Loading first video of series</p>
+          </div>
+          <iframe class="embed-responsive-item" v-if="preview" :src="preview" allowfullscreen></iframe>
         </div>
-        <iframe class="embed-responsive-item" v-if="preview" :src="preview" allowfullscreen></iframe>
       </div>
     </div>
   </div>
