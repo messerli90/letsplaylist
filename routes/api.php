@@ -21,3 +21,8 @@ Route::get('/playlists', 'Api\PlaylistController@index');
 
 Route::get('/games', 'Api\GameController@index');
 Route::get('/games/{id}', 'Api\GameController@show');
+
+
+Route::get('test/playlist', 'Api\TestController@playlist');
+Route::get('test/playlist-items', 'Api\TestController@playlistItems');
+Route::get('test/video', 'Api\TestController@video');
