@@ -5,6 +5,7 @@ Vue.component('playlist-index', require('./components/PlaylistIndex.vue'));
 
 Vue.component('playlist-item', require('./components/PlaylistItem.vue'));
 Vue.component('playlist-card', require('./components/PlaylistCard.vue'));
+Vue.component('paginator', require('./components/Page.vue'));
 Vue.component('banner', require('./components/Banner.vue'));
 
 const app = new Vue({

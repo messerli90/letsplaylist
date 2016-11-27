@@ -5,6 +5,7 @@
         <h1>Find a Playlist for <span style="color: #AA3939">{{ header }}</span></h1>
         <p>
           No more weeding through review videos, advertisements, trailers, etc when trying to find your next <strong>Let's Play</strong> series.
+          Just select a game and check out a preview of the first video in the series. Then click on the playlist title to go to the Youtube page.
         </p>
         <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
       </div>
@@ -20,7 +21,7 @@ export default {
     return {
       header: ' the Game of your choice',
       game: {},
-      banner_slug: 'pyvs7oejfhvvttiqb4s0'
+      banner_slug: 'pyvs7oejfhvvttiqb4s0',
     }
   },
 

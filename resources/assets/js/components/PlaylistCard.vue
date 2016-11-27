@@ -20,7 +20,7 @@
     <div class="panel-footer clearfix">
       <ul class="text-right list-inline">
         <li class="text-muted"><i class="fa fa-clock-o fa-fw"></i> {{ playlist.created_at_human }}</li>
-        <li><a class="text-muted" href="#" @click.prevent="getPreview">Preview <i class="fa fa-caret-down"></i></a></li>
+        <li><a class="btn btn-primary btn-sm" href="#" @click.prevent="getPreview">Preview <i class="fa fa-caret-down"></i></a></li>
       </ul>
 
       <hr v-if="preview_open" />

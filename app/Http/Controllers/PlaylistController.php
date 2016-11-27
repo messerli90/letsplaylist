@@ -17,7 +17,7 @@ class PlaylistController extends Controller
 {
     public function index ()
     {
-        $games = Game::orderBy('created_at', 'asc')->get()->toJson();
+        $games = Game::orderBy('title', 'asc')->get()->toJson();
 
         return view('playlists.index', compact('games'));
     }
@@ -73,7 +73,7 @@ class PlaylistController extends Controller
         $channel->title = $youtube_channel->snippet->title;
         $channel->description = $youtube_channel->snippet->description;
         $channel->image = $youtube_channel->snippet->thumbnails->default->url;
-        $channel->custom_url = $youtube_channel->snippet->customUrl;
+        $channel->custom_url = isset($youtube_channel->snippet->customUrl) ? $youtube_channel->snippet->customUrl : null;
         $channel->video_count = $youtube_channel->statistics->videoCount;
         $channel->save();
 

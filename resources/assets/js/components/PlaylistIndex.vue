@@ -9,6 +9,9 @@
       <h3>Couldn't find anything matching your search.</h3>
     </div>
     <playlist-card v-if="!loading" v-for="playlist in playlists" :playlist="playlist"></playlist-card>
+    <div class="text-center">
+      <paginator :pagination="meta.pagination" v-if="playlists.length" for="playlists"></paginator>
+    </div>
   </div>
 </template>
 
