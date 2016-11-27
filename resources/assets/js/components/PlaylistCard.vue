@@ -14,7 +14,7 @@
           </div>
           <div class="media-body">
             <h4 class="media-heading"><a :href="playlistUrl" target="_blank">{{ playlist.title }}</a></h4>
-            {{ playlist.description }}
+            {{ playlist.description.substring(0, 140) }}
           </div>
         </div>
       </div>
