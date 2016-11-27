@@ -13,8 +13,7 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
-Route::get('home', 'HomeController@index');
+Route::get('/', 'PlaylistController@index');
 
 Route::group(['prefix' => 'playlists'], function ()
 {
